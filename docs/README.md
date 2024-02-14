@@ -12,35 +12,26 @@ This solution requires specific HW. The data acquisition SW and the defect detec
 
 ## Top Ten Functionalities
 
-   ### 1. Welding process monitoring system.
-   Main feature of the *Welding Process Inspector*. It provides the technical means (HW & SW) to monitorize all relevant parameters of a welding processassutring a good synchroniztion.
+1. **Welding process monitoring system**: Main feature of the *Welding Process Inspector*. It provides the technical means (HW & SW) to monitorize all relevant parameters of a welding processassutring a good synchroniztion.
 
- ### 2. Enables implementation of AI-based quality assurance algorithms.
- Both the HW and the SW are designed to implement quality control algorithms, feeding them with real-time processs data.
+2. **Enables implementation of AI-based quality assurance algorithms**: Both the HW and the SW are designed to implement quality control algorithms, feeding them with real-time processs data.
 
-   ### 3. Early detection of defects: time and scrap reduction in rework tasks.
+3. **Early detection of defects**: time and scrap reduction in rework tasks.
    The monitoring system can be used to acquire welding data. These data is susceptible to be used to elaborate a data model of the welding process that should be able to detect when the welding process is out of the optimal parameters window and, therefore, return the probability of defects appearing in time real.
 
-   ### 4. Flexibility.
-   The monitoring system covers a great variety of sensors and communication protocols (e.g., TCP/IP or Profibus).
+4. **Flexibility**: The monitoring system covers a great variety of sensors and communication protocols (e.g., TCP/IP or Profibus).
 
-   ### 5. Scalability.
-   The system eases to add new sensors. The monitoring HW and SW can be updated and cofnigured to handle a great number of sensors.
+5. **Scalability**: The system eases to add new sensors. The monitoring HW and SW can be updated and cofnigured to handle a great number of sensors.
 
-   ### 6. Adaptability.
-   The monitoring system is adaptable to any metallic welding process. The sensors and protocols used to monitoring the welding process can be selected for each specific case (i.e. d+different welding proccesses, diferent weldign stations...)
+6. **Adaptability**: The monitoring system is adaptable to any metallic welding process. The sensors and protocols used to monitoring the welding process can be selected for each specific case (i.e. d+different welding proccesses, diferent weldign stations...)
 
-   ### 7. It contributes to the digitalization of the industry.
-   The monitored data can be seen as the digital twin of the welding process, enabling a digital traceability of each welded bead.
+7. **It contributes to the digitalization of the industry**: The monitored data can be seen as the digital twin of the welding process, enabling a digital traceability of each welded bead.
 
-   ### 8. Set an alarm to stop the process when out of quality limits.
-   The *Welding Process Inpector* provides the data processing and the interface required to implement alarms when abnormal process behaviours are being produced.
+8. **Set an alarm to stop the process when out of quality limits**: The *Welding Process Inpector* provides the data processing and the interface required to implement alarms when abnormal process behaviours are being produced.
 
-   ### 9. Enables process control.
-   The *Welding Process Inpector* furnishes further data to understand reality of the welding process and provides the interfaces with the process to test/implement closed-loop control strategies.
+9. **Enables process control**: The *Welding Process Inpector* furnishes further data to understand reality of the welding process and provides the interfaces with the process to test/implement closed-loop control strategies.
 
-   ### 10. Provides thermal info from welding bead and base plates.
-   The system can record images from IR cameras using GeniCam standard. Also, punctual pyrometers contribute to gather thermal information.
+10. **Provides thermal info from welding bead and base plates**: The system can record images from IR cameras using GeniCam standard. Also, punctual pyrometers contribute to gather thermal information.
 
 ## Architecture Diagram
 
