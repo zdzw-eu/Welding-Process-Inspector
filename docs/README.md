@@ -1,4 +1,4 @@
-# T6.3 - Welding Process Inspector
+# Welding Process Inspector
 
 ## General Description
 This solution aims to predict/estimate the presence of defects during the welding process using process parameters monitored in real time. The goal is to reduce the production time and waste when a defective weld occurs.
