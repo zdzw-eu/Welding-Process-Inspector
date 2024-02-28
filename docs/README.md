@@ -34,7 +34,7 @@ This solution requires specific HW. The data acquisition SW and the defect detec
 
 ## Architecture Diagram
 
-![image](./images/WP06-architecture-diagram.jpg "architecture diagram")
+![image](./images/WP06-WPI-architecture-diagram.jpg "architecture diagram")
 
 - **Internal modules**:
     - *Main*: Synchronizes data acquisition from the different internal modules (sensors, data storage and defect detection algorithms).
@@ -51,11 +51,11 @@ This solution requires specific HW. The data acquisition SW and the defect detec
 ## Image Overview
 The present section addresses the user interfaces envisioned to interact with the Welding Process Monitoring solution. Two GUIs are defined, one for configuring all devices involved in the data acquisition which also provides some features for online visualization and another one for offline analysis of the recorded data.
 
-![image](./images/WP06-online-mockup.png "Online GUI (mockup)")
+![image](./images/WP06-WPI-online-mockup.png "Online GUI (mockup)")
 
 Above figure is a design for the GUI in charge of the HW configuration of ZDZW Welding Inspector the and a subsampled online visualization of the welding process (a.k.a. *recorder app*). On the left side you can see the 3 different formats for the visualization of the data that is being recorded, while the right side is reserved for the configuration of the system and to start/stop the recording. The online visualization includes an image viewer for the IR camera and graph and scalar viewers which allow the user to plot desired parameters. The “configuring input/output interfaces” contains the settings of the sensors that are being used for monitoring the welding process. The “Recorded params” section links the process parameters with the sensor that is being used to get their values. The “metadata” section contains relevant logistic information. The GUI allows the user to enable/disable a defect detection model and to load different models. Finally, the GUI offers a couple of buttons to start and stop the recording manually.
 
-![image](./images/WP06-offline-mockup.png "Offline GUI (mockup)")
+![image](./images/WP06-WPI-offline-mockup.png "Offline GUI (mockup)")
 
 Above figure shows the mockup of the GUI for the offline visualization (a.k.a. *visualizer app*). While the *recorder app* offers a restricted, but online, visualization of the monitored data from the welding process, the *visualizer app* allows skilled personnel to analise the recorded data aand visualize it in different formats. The *recorder app* allows the operator to detect disturbances on the welding process or possible mistakes in the configuration of the monitored system, while the *visualizer app* allows a deeper analysis of the recorded data. In addition to the image and graph viewers already available in the *recorder app*, the *visualizer app* also provides a 3D representation of the process parameters.
 
@@ -65,7 +65,7 @@ Above figure shows the mockup of the GUI for the offline visualization (a.k.a. *
 
 The *Welding Process Inspector* relies on a combination of some specific HW and custom SW. The HW is divided into a CPU, some middle HW for signal processing and the sensors.
 
-![image](./images/WP06-signal-processing-HW.png)
+![image](./images/WP06-WPI-signal-processing-HW.png)
 
 A small factor CPU is chosen for the sake of space economy, but guaranteeing minimum requirements to handle the data acquisition SW and capability to deploy data models based on Deep Learning techniques.
 
@@ -75,11 +75,11 @@ The welding voltage must be pre-processed at the input of the oscilloscope to ad
 
 A DAQ (digital acquisition board) processes analog and digital signals to be read by a CPU. In our app we use a *labjack T7* which handle fairly high resolution analog I/O and digital I/O. This particular device has some useful funtionalities as frequency inputs, high speed counters or support to protocols like SPI or I2C among others. The great variety of options of this DAQ contributes to several functionalities of the solution, like the flexibility, adaptability, scalability or the ability to set alarms to stop the welding process when it's out of quality limits, for example.
 
-![image](./images/WP06-cabinet.png "cabinet")
+![image](./images/WP06-WPI-cabinet.png "cabinet")
 
 CPU and intermediate signal processing HW is enclosed in a cabinet alongside other components as power sources or wifi/4G router. The cabinet can be easily installed next to or onto the welding station. Different connectors provide HW interfaces to connect the sensors allocated in the different areas of the welding station by convenient wire hoses.
 
-![image](./images/WP06-sensors.png)
+![image](./images/WP06-WPI-sensors.png)
 
 The sensors must be placed on the welding torch, welding power wire hose and positioning system to acquire the relevant information. Above picture show some typical sensors placed in a Sumerged Arc Welding torch: encoders for wire feed rate (green), pyrometers (red), laser-line profilometer (yellow) and GigE camera (blue).
 
