@@ -1,13 +1,13 @@
 # Welding Process Inspector
 
 ## General Description
-This solution aims to predict/estimate the presence of defects during the welding process using process parameters monitored in real time. The goal is to reduce the production time and waste when a defective weld occurs.
+This solution is designed to predict and estimate the presence of defects during the welding process by monitoring process parameters in real time. The objective is to reduce production time and minimize waste caused by defective welds.
 
-It is deployed in two stages. First, several sensors are selected and integrated on the welding torch to obtain a comprehensive monitoring of the welding process. The sensors will look at different process parameters like welding speed, wire feed rate, welding electrical signals, thermal info of bead and base plate… The system will synchronize the data temporally and spatially, creating valuable and complete datasets.
+Deployment occurs in two stages. First, several sensors are selected and integrated into the welding torch to comprehensively monitor the welding process. These sensors track various process parameters, such as welding speed, wire feed rate, welding electrical signals, and thermal information of the weld bead and base plate. The system synchronizes this data both temporally and spatially, creating comprehensive and valuable datasets.
 
-On a second stage, this data is analyzed and correlated with NDT data to create data models capable to detect high probabilities of defect appearence in real time. The model is deployed following an edge computing paradigm, i.e. next to the monitoring system.
+In the second stage, the collected data is analyzed and correlated with Non-Destructive Testing (NDT) data to develop models capable of alerting of high probabilities of defect occurrence in real time. These models are deployed using an edge computing paradigm, meaning they operate close to the monitoring system.
 
-This solution requires specific HW. The data acquisition SW and the defect detection model are embedded in the acquisition HW. The user will have two interfaces: one for the configuration and control of the HW and the other for the offline and detailed visualization of the recorded data.
+This solution requires specific hardware. The data acquisition software and the defect detection model are embedded within this hardware. Users will have access to two interfaces: one for configuring and controlling the hardware, and another for offline, detailed visualization of the recorded data.
 
 
 ## Top Ten Functionalities
