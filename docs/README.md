@@ -1,14 +1,13 @@
 # Welding Process Inspector
 
 ## General Description
-This solution is designed to predict and estimate the presence of defects during the welding process by monitoring process parameters in real time. The objective is to reduce production time and minimize waste caused by defective welds.
+This solution aims to predict and detect defects during the welding process by continuously monitoring key process parameters in real time. Its main goal is to reduce production time and minimize material waste caused by defective welds.
 
-It is deployed in two stages. Firstly, based on the type of welding process and the specific welding equipment, several sensors are selected and integrated on the torch to obtain comprehensive monitoring of the welding process. The sensors will look at different process parameters like welding speed, wire feed rate, welding electrical signals, thermal info of bead and base plate… The system will synchronize the data temporally and spatially, creating good datasets that can be analyzed and correlated with common defects.
+The system is deployed in two stages. In the first stage, depending on the welding process and the equipment used, a set of sensors is selected and integrated directly on the torch to enable comprehensive process monitoring. These sensors capture parameters such as welding speed, wire feed rate, electrical signals, and thermal data from both the weld bead and the base material. All this data is synchronized to generate high-quality datasets that can be analyzed and linked to common welding defects.
 
-In the second stage, the collected data is analyzed and correlated with Non-Destructive Testing (NDT) data to develop models capable of alerting of high probabilities of defect occurrence in real time. These models are deployed using an edge computing paradigm, meaning they operate close to the monitoring system.
+In the second stage, the collected data is combined with Non-Destructive Testing (NDT) results to train models capable of detecting and alerting in real time when there is a high probability of a defect occurring. These models are deployed using an edge computing approach, meaning they run locally, close to the monitoring system for fast response.
 
-This solution requires specific hardware. The data acquisition software and the defect detection model are embedded within this hardware. Users will have access to two interfaces: one for configuring and controlling the hardware, and another for offline, detailed visualization of the recorded data.
-
+The solution includes specific hardware where both the data acquisition software and the defect detection models are embedded. Users interact with the system through two interfaces: one for configuring and managing the hardware, and another for offline access to detailed visualizations of the recorded data.
 
 ## Top Ten Functionalities
 
@@ -22,7 +21,7 @@ This solution requires specific hardware. The data acquisition software and the 
 
 5. **Contribution to the digitalization of the industry**: Process variables are digitally acquired and stored. The monitored data can be seen as a kind of digital twin of the welding process, enabling a digital traceability of each welded bead.
 
-6. **Early detection of defects**: Time and scrap reduction in rework tasks. The monitoring system can be used to acquire welding data. These data is susceptible to be used to elaborate a data model of the welding process that should be able to detect when the welding process is out of the optimal parameters window and, therefore, return the probability of defects appearing in real time.
+6. **Early detection of defects**: The monitoring system collects welding data, which can be used to develop a data-driven model of the welding process. This model is designed to detect when the process deviates from the optimal parameter window and to provide a real-time probability of defect occurrence.
 
 7. **Enables implementation of AI-based quality assurance algorithms**: Both the HW and the SW are designed to implement quality control algorithms, feeding them with real-time processs data.
 
@@ -41,18 +40,18 @@ This solution requires specific hardware. The data acquisition software and the 
     - *GigE IR cam*: This module enables connection to cameras following GigE/genie cam protocols/standards.
     - *DAQ board*: Data Acquisition Board. Acquire digital and analogue signals, e.g., pyrometers.
     - *Oscilloscope*: Acquires analogue signals at a high sampling frequency, i.e., voltage and current of each welding torches.
-    - *Laser line*: retrieves the geometrical data scanned by a laser line profilometer.
     - *Defect Detection Algorithm*: Analises data stream from sensors and warns when anomalies are identified.
     - *Storage*: Data is saved locally in a custom data format.
 - **GUI**: Graphical User Interface. Allows the user to configure the monitoring system and to check the correct operation of the system during welding.
-- **API**: SW interface to the monitoring system
+- **Traceability Gateway**: The system uses the ZDZW Traceability Gateway to comunicate with the ZDZW platform. 
 
 ## Image Overview
 The present section addresses the user interfaces envisioned to interact with the Welding Process Monitoring solution. Two GUIs are defined, one for configuring all devices involved in the data acquisition which also provides some features for online visualization and another one for offline analysis of the recorded data.
 
 ![image](./images/WP06-WPI-online-interface.png "Online GUI")
+![image](.)/images/WP06-WPI-operator.png "operator")
 
-Above figure shows the GUI in charge of the HW configuration of *ZDZW Welding Process Inspector* the and a subsampled online visualization of the welding process (a.k.a. *capturer app*). On the left side you can see the 3 different formats for the visualization of the data that is being recorded, while the right side is reserved for the configuration of the system and to start/stop the recording. The online visualization includes an image viewer for the IR camera and graph and scalar viewers which allow the user to plot desired parameters. The “configuring input/output interfaces” contains the settings of the sensors that are being used for monitoring the welding process. The “Recorded params” section links the process parameters with the sensor that is being used to get their values. The “metadata” section contains relevant logistic information. The GUI allows the user to enable/disable a defect detection model and to load different models. Finally, the GUI offers a couple of buttons to start and stop the recording manually.
+Above figure shows the GUI in charge of the HW configuration of *ZDZW Welding Process Inspector* and a subsampled online visualization of the welding process (a.k.a. *capturer app*). On the left side you can see the 3 different formats for the visualization of the data that is being recorded, while the right side is reserved for the configuration of the system and to start/stop the recording. The online visualization includes an image viewer for the IR camera and graph and scalar viewers which allow the user to plot desired parameters. The “configuring input/output interfaces” contains the settings of the sensors that are being used for monitoring the welding process. The “Recorded params” section links the process parameters with the sensor that is being used to get their values. The “metadata” section contains relevant logistic information. The GUI allows the user to enable/disable a defect detection model and to load different models. Finally, the GUI offers a couple of buttons to start and stop the recording manually.
 
 ![image](./images/WP06-WPI-offline-interface.png "Offline GUI")
 
@@ -95,19 +94,19 @@ Below we detail the computation requirements for the user interfaces depicted in
 
 
 ## Installation Procedure
-All the SW we will be provided to the client pre-installed in the HW selected for the specific client use case. 
+One important point of the present solution is that is highly adpatable to the welding process and welding equipment of the client. Most of the SW would be provided to the client pre-installed in the HW selected for the specific use case. The SW interfaces to interact with the system are provided as standalone program files.
 
 ## How To Use
-[*Step by step on how to use the application*]
+The welding operator should have access to a tablet or touch screen with *capturer app*. From this GUI, they can connect with the Welding Process Inspector and check the configuration of all sensors. Defect detection models are preloaded by manufacturer. From the GUI, operator can start and stop the welding monitoring and configure wich welding parameters and alerts visualize. When high probability of defects appearance is detected, alarmas are displayed to operator.
 
-TBD
+Offline *visualizer app* would be only used by specialized personnel to deep analysis of recorded data, in case needed. 
 
-## Additional Learning Materials
-[*Links to other learning materials like youtube tutorials or work from WP10*]
+## Links
 
-- [Introduction 1](https://youtu.be/-0fFijQJMHg?si=no6L0VUFBk85MzfD)
-- [Introduction 2](https://youtu.be/-0fFijQJMHg?si=o7Nk6t1FKlyOZ7x1)
+- [Introduction 1](https://www.youtube.com/watch?v=33Q-c82fChw)
+- [Introduction 2](https://www.youtube.com/watch?v=-0fFijQJMHg)
+- [Demo](https://www.youtube.com/watch?v=vxUo37tsmHA)
+- [webinar: AI-Supported Monitoring System for Defect Detection in Submerged Arc Welding](https://www.youtube.com/watch?v=otOrKbyybMQ)
 
 
 
-*IN EXPANSION*
