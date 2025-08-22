@@ -49,7 +49,6 @@ The solution includes specific hardware where both the data acquisition software
 The present section addresses the user interfaces envisioned to interact with the Welding Process Monitoring solution. Two GUIs are defined, one for configuring all devices involved in the data acquisition which also provides some features for online visualization and another one for offline analysis of the recorded data.
 
 ![image](./images/WP06-WPI-online-interface.png "Online GUI")
-![image](./images/WP06-WPI-operator.png "operator")
 
 Above figure shows the GUI in charge of the HW configuration of *ZDZW Welding Process Inspector* and a subsampled online visualization of the welding process (a.k.a. *capturer app*). On the left side you can see the 3 different formats for the visualization of the data that is being recorded, while the right side is reserved for the configuration of the system and to start/stop the recording. The online visualization includes an image viewer for the IR camera and graph and scalar viewers which allow the user to plot desired parameters. The “configuring input/output interfaces” contains the settings of the sensors that are being used for monitoring the welding process. The “Recorded params” section links the process parameters with the sensor that is being used to get their values. The “metadata” section contains relevant logistic information. The GUI allows the user to enable/disable a defect detection model and to load different models. Finally, the GUI offers a couple of buttons to start and stop the recording manually.
 
@@ -94,10 +93,12 @@ Below we detail the computation requirements for the user interfaces depicted in
 
 
 ## Installation Procedure
-One important point of the present solution is that is highly adpatable to the welding process and welding equipment of the client. Most of the SW would be provided to the client pre-installed in the HW selected for the specific use case. The SW interfaces to interact with the system are provided as standalone program files.
+One important point of the present solution is that is highly adpatable to the welding process and welding equipment of the client. Most of the SW would be provided to the client pre-installed in the HW selected for the specific use case. The SW interfaces (*capturer app* and *visualizer app*) to interact with the system are provided as standalone program files.
 
 ## How To Use
 The welding operator should have access to a tablet or touch screen with *capturer app*. From this GUI, they can connect with the Welding Process Inspector and check the configuration of all sensors. Defect detection models are preloaded by manufacturer. From the GUI, operator can start and stop the welding monitoring and configure wich welding parameters and alerts visualize. When high probability of defects appearance is detected, alarmas are displayed to operator.
+
+![image](./images/WP06-WPI-operator.png "operator")
 
 Offline *visualizer app* would be only used by specialized personnel to deep analysis of recorded data, in case needed. 
 
