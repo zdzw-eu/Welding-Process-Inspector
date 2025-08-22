@@ -43,7 +43,7 @@ The solution includes specific hardware where both the data acquisition software
     - *Defect Detection Algorithm*: Analises data stream from sensors and warns when anomalies are identified.
     - *Storage*: Data is saved locally in a custom data format.
 - **GUI**: Graphical User Interface. Allows the user to configure the monitoring system and to check the correct operation of the system during welding.
-- **Traceability Gateway**: The system uses the ZDZW Traceability Gateway to comunicate with the ZDZW platform. 
+- **Traceability Gateway**: The system uses the ZDZW Traceability Gateway to comunicate with the ZDZW platform - WP07
 
 ## Image Overview
 The present section addresses the user interfaces envisioned to interact with the Welding Process Monitoring solution. Two GUIs are defined, one for configuring all devices involved in the data acquisition which also provides some features for online visualization and another one for offline analysis of the recorded data.
